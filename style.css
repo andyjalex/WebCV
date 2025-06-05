@@ -1,0 +1,394 @@
+/* ================== Fonts ================== */
+@font-face {
+    font-family: "GraphikBold";
+    src: url("./GraphikBold.otf");
+  }
+  @font-face {
+    font-family: "GraphikMedium";
+    src: url("./GraphikMedium.otf");
+  }
+  @font-face {
+    font-family: "GraphikRegular";
+    src: url("./GraphikRegular.otf");
+  }
+  @font-face {
+    font-family: "GraphikLight";
+    src: url("./GraphikLight.otf");
+  }
+ 
+  
+  /* ================== Base Styles ================== */
+  body {
+    margin: 0;
+    font-family: "GraphikMedium", sans-serif;
+    background-image: url(cv-bg.png);
+    background-repeat: repeat-y;
+    background-size: contain;
+    background-attachment: scroll;
+  }
+  
+  /* ================== Typography ================== */
+  h1 {
+    font-size: 40px;
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+  h2 {
+    font-size: 32px;
+    color: #4d4d4d;
+    text-align: left;
+    margin: 2rem 1rem;
+    font-family: "GraphikBold", sans-serif;;
+  }
+  h3,
+  h4,
+  h5 {
+    margin: 0.5rem 0rem;
+    font-family: "GraphikLight", sans-serif;;
+  }
+  p {
+    font-size: 18px;
+  }
+  
+  /* ================== Navigation ================== */
+  nav {
+    display: flex;
+    justify-content: center;
+  }
+  .main-nav a {
+    font-family: "GraphikBold", sans-serif;
+    font-size: 18px;
+    color: black;
+    text-decoration: none;
+  }
+  a {
+    color: whitesmoke;
+    text-decoration: none;
+  }
+  ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  li {
+    padding: 1rem;
+  }
+  
+  /* ================== Cards ================== */
+  .card {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    padding: 40px;
+    background-color: #2d2d2d;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    margin: 1rem 2rem;
+    overflow: hidden;
+    color: white;
+    transition: color 0.3s ease;
+  }
+  
+  .card:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: calc(-100% + 5px);
+    width: 100%;
+    height: 100%;
+    background-color: #3a3a3a;
+    z-index: 1;
+    transition: bottom 0.5s ease-in-out;
+  }
+  
+  .card:hover:before {
+    bottom: 0;
+  }
+  
+  .card .content {
+    position: relative;
+    z-index: 2;
+    transition: color 0.3s ease;
+  }
+  
+  .card:hover .content {
+    color: #fefefe;
+    text-shadow: 0 1px 3px rgba(255, 255, 255, 0.2);
+  }
+  
+  /* ================== Sections ================== */
+  #skills ul {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+  }
+  #skills li {
+    background-color: #000;
+    margin: 1em;
+    border-radius: 100%;
+    position: relative;
+    text-align: center;
+  }
+  
+  /* ================== Header & Profile ================== */
+  .main-header {
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  .profile__header {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin: 0 2rem;
+  }
+  .profile__header img {
+    width: 200px;
+    border-radius: 50%;
+  }
+  .profile__description p {
+    margin: 1rem 2rem;
+  }
+  .profile__description .card {
+    max-width: 600px;
+  }
+  .profile-details-wrapper {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  
+  /* ================== Content ================== */
+  .content {
+    position: relative;
+    color: #fff;
+    z-index: 2;
+    transition: 0.5s;
+  }
+  
+  /* ================== Grid ================== */
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 10px;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+  }
+  .grid-item {
+    background-color: transparent;
+    padding: 8px;
+    text-align: center;
+    border: none;
+  }
+  
+  /* ================== Section Blocks ================== */
+  #work,
+  #education,
+  #contact,
+  #profile,
+  #skills {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0 2rem;
+  }
+  #work .card {
+    max-width: 400px;
+  }
+  
+  /* ================== Showcase ================== */
+  #web-creations {
+    padding: 4rem 2rem;
+    position: relative;
+    text-align: center;
+  }
+  .showcase-stand {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    min-height: 250px;
+  }
+  .stand {
+    position: absolute;
+    bottom: 0;
+    width: 60%;
+    height: 250px;
+    background: #111;
+    box-shadow: inset 0 4px 10px rgba(255, 255, 255, 0.05),
+      0 20px 40px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    transform: perspective(800px) rotateX(12deg) skew(-45deg) translateX(-150px);
+    z-index: 1;
+    overflow: hidden;
+  }
+  .stand::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 10px;
+    background: linear-gradient(to bottom, #0b0b0b, #000);
+    border-radius: 0 0 10px 10px;
+  }
+  
+  /* ================== URLs ================== */
+  .urls {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+    gap: 2rem;
+  }
+  .urls::before {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    width: 80%;
+    height: 25px;
+    background: rgba(0, 0, 0, 0.3);
+    filter: blur(10px);
+    z-index: -1;
+  }
+  .url-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform: translateY(-70px) translateX(-150px);
+    color: white;
+  }
+  .url-item img:hover {
+    transform: scale(1.2);
+    transition: transform 0.3s ease;
+  }
+  .url-item a {
+    font-size: 16px;
+  }
+  
+  /* ================== Education ================== */
+  #education .content {
+    margin: 0 3rem;
+  }
+  #education h2 {
+    margin: 2rem 1rem;
+  }
+  #education .grid-container {
+    grid-template-rows: repeat(1, 1fr);
+  }
+  
+  /* ================== Footer ================== */
+  footer {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    padding: 1rem;
+    color: white;
+    background: black;
+  }
+  
+  /* ================== Skills ================== */
+  #skills .container {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    color: white;
+    width: 100%;
+  }
+  
+  /* ================== Animation ================== */
+  @keyframes floatIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  .url-item {
+    animation: floatIn 0.8s ease forwards;
+  }
+  
+  /* ================== Positioned Elements ================== */
+  #bmth-sign {
+    position: absolute;
+    left: 35%;
+    top: 25%;
+  }
+  #alum-sign {
+    position: absolute;
+    left: 15%;
+    top: 150%;
+  }
+  
+  /* ================== Responsive ================== */
+  @media (max-width: 768px) {
+    .main-header {
+      display: none;
+    }
+    .card {
+      max-width: 300px;
+      margin: 1rem 0.5rem;
+    }
+    #work .card {
+      max-width: 300px;
+    }
+    .profile__description .card {
+      width: 300px;
+    }
+    #work,
+    #education,
+    #contact,
+    #profile,
+    #skills {
+      margin: 0;
+    }
+    .stand {
+      width: 90%;
+      transform: perspective(800px) rotateX(12deg) skew(-45deg) translateX(-30px);
+    }
+    #work .grid-container,
+    #education .grid-container {
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+    }
+    #skills .container {
+      flex-direction: row;
+      padding: 0;
+    }
+    #skills ul {
+      flex-direction: column;
+    }
+    .profile-details-wrapper {
+      align-items: center;
+      width: 100%;
+    }
+    #bmth-sign {
+      position: absolute;
+      left: 35%;
+      top: 10%;
+    }
+    .urls {
+      display: grid;
+      align-items: center;
+      gap: 0;
+    }
+    .url-item {
+      transform: none;
+      margin-bottom: 1rem;
+    }
+  }
+  
